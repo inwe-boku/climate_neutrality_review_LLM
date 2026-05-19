@@ -11,19 +11,24 @@ Small Python framework to enrich publication Excel sheets with LLM-based extract
 
 ## Usage
 ```bash
-python excel_llm_framework.py input.xlsx output.xlsx --columns "method,region,sector"
+python excel_llm_framework.py input.xlsx output_json_dir
 ```
 
 Optional flags:
-- `--abstract-column "abstract"` (default: `abstract`)
+- `--abstract-column "Abstract"` (default: `Abstract`)
 - `--instruction "..."` to customize extraction behavior
 
-By default, the CLI prints each prompt and expects a JSON response from stdin (so you can connect your own LLM API/client with minimal changes).
+By default, the CLI sends each prompt to the installed Copilot CLI and writes one JSON file per row into the output directory.
 
 ## Requirements
 To run Excel I/O:
 ```bash
 pip install pandas openpyxl
+```
+
+To run the LLM step, install the GitHub Copilot CLI and sign in once:
+```bash
+gh copilot
 ```
 
 ## Tests
