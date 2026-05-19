@@ -25,6 +25,7 @@ def load_default_instruction() -> str:
 @dataclass
 class FrameworkConfig:
     abstract_column: str = "Abstract"
+    doi_column: str = "DOI"
     instruction: str = load_default_instruction()
 
 
@@ -60,15 +61,32 @@ class ExcelLLMFramework:
         dataframe = pd.read_excel(input_excel_path, sheet_name=sheet_name)
         if self.config.abstract_column not in dataframe.columns:
             raise ValueError(f"Missing required abstract column: '{self.config.abstract_column}'")
+        if self.config.doi_column not in dataframe.columns:
+            raise ValueError(f"Missing required DOI column: '{self.config.doi_column}'")
 
         rows = dataframe.to_dict(orient="records")
+        doi_values: list[str] = []
+        for row_index, row in enumerate(rows, start=1):
+            doi_value = row.get(self.config.doi_column)
+            doi_text = str(doi_value).strip() if doi_value is not None else ""
+            if not doi_text:
+                raise ValueError(f"Missing DOI value for row {row_index}")
+            doi_values.append(doi_text)
+
         processed_rows = self.process_rows(rows)
         output_path = Path(output_directory)
         output_path.mkdir(parents=True, exist_ok=True)
 
         written_files: list[Path] = []
-        for row_index, extracted_row in enumerate(processed_rows, start=1):
-            file_path = output_path / f"row_{row_index:04d}.json"
+        for row_index, (doi_text, extracted_row) in enumerate(
+            zip(doi_values, processed_rows), start=1
+        ):
+            extracted_row["doi"] = doi_text
+            safe_doi = re.sub(r"[^A-Za-z0-9._-]+", "_", doi_text)
+            if safe_doi in {"", ".", ".."}:
+                raise ValueError(f"Invalid DOI value for filename in row {row_index}")
+
+            file_path = output_path / f"{safe_doi}.json"
             file_path.write_text(
                 json.dumps(extracted_row, ensure_ascii=False, indent=2, sort_keys=True),
                 encoding="utf-8",

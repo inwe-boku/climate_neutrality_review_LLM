@@ -7,7 +7,7 @@ Small Python framework to enrich publication Excel sheets with LLM-based extract
 - Uses a configurable `abstract` column (or any user-selected column).
 - Lets you define which output columns should be filled by the LLM.
 - Builds a prompt row-by-row and asks for JSON output with exactly those fields.
-- Writes the enriched rows to a new Excel file.
+- Writes one JSON file per row (named by DOI) into the output directory.
 
 ## Usage
 ```bash
@@ -18,7 +18,7 @@ Optional flags:
 - `--abstract-column "Abstract"` (default: `Abstract`)
 - `--instruction "..."` to customize extraction behavior
 
-By default, the CLI sends each prompt to the installed Copilot CLI and writes one JSON file per row into the output directory.
+By default, the CLI sends each prompt to the installed Copilot CLI and writes one JSON file per row into the output directory. Each output file includes the `doi` value from the input row, so the input must contain a `DOI` column with non-empty values.
 
 ## Requirements
 To run Excel I/O:
