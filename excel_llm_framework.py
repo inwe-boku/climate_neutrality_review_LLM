@@ -1,7 +1,11 @@
+# pyright: reportMissingImports=false
 from __future__ import annotations
 
 import argparse
+import importlib
 import json
+import re
+import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Callable, Iterable
@@ -43,12 +47,14 @@ class ExcelLLMFramework:
             processed_rows.append(extracted)
         return processed_rows
 
-    def run_excel(self, input_excel_path: str, output_excel_path: str, sheet_name: str | int = 0) -> None:
+    def run_excel(
+        self, input_excel_path: str, output_directory: str, sheet_name: str | int = 0
+    ) -> list[Path]:
         try:
-            import pandas as pd
+            pd = importlib.import_module("pandas")
         except ImportError as exc:
             raise RuntimeError(
-                "pandas is required to read/write Excel files. Install with: pip install pandas openpyxl"
+                "pandas is required to read Excel files. Install with: pip install pandas openpyxl"
             ) from exc
 
         dataframe = pd.read_excel(input_excel_path, sheet_name=sheet_name)
@@ -57,11 +63,65 @@ class ExcelLLMFramework:
 
         rows = dataframe.to_dict(orient="records")
         processed_rows = self.process_rows(rows)
-        print(processed_rows)
-        pd.DataFrame(processed_rows).to_excel(output_excel_path, index=False)
+        output_path = Path(output_directory)
+        output_path.mkdir(parents=True, exist_ok=True)
+
+        written_files: list[Path] = []
+        for row_index, extracted_row in enumerate(processed_rows, start=1):
+            file_path = output_path / f"row_{row_index:04d}.json"
+            file_path.write_text(
+                json.dumps(extracted_row, ensure_ascii=False, indent=2, sort_keys=True),
+                encoding="utf-8",
+            )
+            written_files.append(file_path)
+
+        return written_files
 
 
-def json_llm_client(prompt: str, _: dict[str, Any]) -> dict[str, Any]:
+def _extract_json_payload(response_text: str) -> str:
+    stripped_text = response_text.strip()
+    fenced_match = re.search(
+        r"^```(?:json)?\s*(.*?)\s*```$", stripped_text, flags=re.DOTALL | re.IGNORECASE
+    )
+    if fenced_match:
+        stripped_text = fenced_match.group(1).strip()
+
+    try:
+        json.loads(stripped_text)
+        return stripped_text
+    except json.JSONDecodeError:
+        pass
+
+    json_start = stripped_text.find("{")
+    json_end = stripped_text.rfind("}")
+    if json_start != -1 and json_end != -1 and json_end > json_start:
+        candidate = stripped_text[json_start : json_end + 1]
+        json.loads(candidate)
+        return candidate
+
+    raise ValueError("Copilot response did not contain valid JSON")
+
+
+def copilot_llm_client(prompt: str, _: dict[str, Any]) -> dict[str, Any]:
+    command = ["copilot", "-p", prompt]
+    completed_process = subprocess.run(
+        command, capture_output=True, text=True, check=False
+    )
+
+    if completed_process.returncode != 0:
+        stderr = completed_process.stderr.strip()
+        stdout = completed_process.stdout.strip()
+        details = stderr or stdout or f"exit code {completed_process.returncode}"
+        raise RuntimeError(f"Copilot CLI failed: {details}")
+
+    response_text = completed_process.stdout.strip()
+    if not response_text:
+        raise RuntimeError("Copilot CLI returned no output")
+
+    return json.loads(_extract_json_payload(response_text))
+
+
+def fallback_json_llm_client(prompt: str, _: dict[str, Any]) -> dict[str, Any]:
     print("\n=== Prompt sent to LLM ===\n")
     print(prompt)
     print("\nPaste JSON response and press Enter:")
@@ -72,16 +132,27 @@ def json_llm_client(prompt: str, _: dict[str, Any]) -> dict[str, Any]:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Extract abstract information into user-selected Excel columns")
     parser.add_argument("input_excel", help="Path to source Excel file")
-    parser.add_argument("output_excel", help="Path for enriched Excel file")
-    parser.add_argument("--abstract-column", default="abstract", help="Column containing abstract text")
+    parser.add_argument(
+        "output_directory", help="Directory where one JSON file per row will be written"
+    )
+    parser.add_argument(
+        "--abstract-column",
+        default=FrameworkConfig().abstract_column,
+        help="Column containing abstract text",
+    )
     parser.add_argument("--instruction", default=FrameworkConfig().instruction, help="Base extraction instruction")
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
-    framework = ExcelLLMFramework(llm_client=json_llm_client)
-    framework.run_excel(args.input_excel, args.output_excel)
+    framework = ExcelLLMFramework(
+        llm_client=copilot_llm_client,
+        config=FrameworkConfig(
+            abstract_column=args.abstract_column, instruction=args.instruction
+        ),
+    )
+    framework.run_excel(args.input_excel, args.output_directory)
 
 
 if __name__ == "__main__":
