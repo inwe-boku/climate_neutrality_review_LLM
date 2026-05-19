@@ -1,0 +1,12 @@
+[workspace]
+authors = ["Max Nutz <max.nutz@boku.ac.at>"]
+channels = ["conda-forge"]
+name = "climate_neutrality_review_LLM"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+pandas = ">=3.0.3,<4"
+openpyxl = ">=3.1.5,<4"
