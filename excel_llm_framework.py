@@ -42,6 +42,7 @@ class ExcelLLMFramework:
     def process_rows(self, rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
         processed_rows: list[dict[str, Any]] = []
         for row in rows:
+            print("Evaluate paper: " + str(row["Book title"]))
             abstract_text = str(row.get(self.config.abstract_column, "") or "")
             prompt = self.build_prompt(abstract_text)
             extracted = self.llm_client(prompt, row) or {}
@@ -73,18 +74,31 @@ class ExcelLLMFramework:
                 raise ValueError(f"Missing DOI value for row {row_index}")
             doi_values.append(doi_text)
 
-        processed_rows = self.process_rows(rows)
         output_path = Path(output_directory)
         output_path.mkdir(parents=True, exist_ok=True)
 
-        written_files: list[Path] = []
-        for row_index, (doi_text, extracted_row) in enumerate(
-            zip(doi_values, processed_rows), start=1
-        ):
-            extracted_row["doi"] = doi_text
+        # Filter rows: only process those whose output files don't exist yet
+        rows_to_process: list[dict[str, Any]] = []
+        dois_to_process: list[str] = []
+
+        for row_index, (row, doi_text) in enumerate(zip(rows, doi_values), start=1):
             safe_doi = re.sub(r"[^A-Za-z0-9._-]+", "_", doi_text)
             if safe_doi in {"", ".", ".."}:
                 raise ValueError(f"Invalid DOI value for filename in row {row_index}")
+
+            file_path = output_path / f"{safe_doi}.json"
+            if not file_path.exists():
+                rows_to_process.append(row)
+                dois_to_process.append(doi_text)
+
+        written_files: list[Path] = []
+        for row, doi_text in zip(rows_to_process, dois_to_process):
+            # Process single row and write output immediately
+            processed_rows = self.process_rows([row])
+            extracted_row = processed_rows[0] if processed_rows else {}
+            
+            extracted_row["doi"] = doi_text
+            safe_doi = re.sub(r"[^A-Za-z0-9._-]+", "_", doi_text)
 
             file_path = output_path / f"{safe_doi}.json"
             file_path.write_text(
