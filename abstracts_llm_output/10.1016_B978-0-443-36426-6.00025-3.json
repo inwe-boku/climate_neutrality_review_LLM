@@ -1,0 +1,11 @@
+{
+  "doi": "10.1016/B978-0-443-36426-6.00025-3",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "Abstract describes techniques and approaches to reach net zero but does not present an assessed or modeled pathway/configuration that IS climate-neutral.",
+  "q2_comment": "No specific spatial areas (country, city, region) are mentioned; only global and generic references (urban informal settlements, cities).",
+  "q2_region": "no",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "While quantitative data is present (electricity 23→33 EJ, biomass 101→62 EJ) and modeling is mentioned as a technique, it is unclear whether actual quantitative modeling/scenario analysis was conducted to generate climate-neutral pathways.",
+  "q4_method": "unclear"
+}

@@ -1,0 +1,11 @@
+{
+  "doi": "10.1109/CIEEC60922.2024.10583848",
+  "q1_climate_neutrality": "unclear",
+  "q1_comment": "Paper addresses climate neutrality goals and proposes optimization methods, but doesn't clearly confirm whether the resulting system configuration IS climate-neutral.",
+  "q2_comment": "",
+  "q2_region": "no",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "",
+  "q4_method": "yes"
+}

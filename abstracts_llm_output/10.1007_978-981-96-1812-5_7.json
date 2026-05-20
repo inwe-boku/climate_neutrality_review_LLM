@@ -1,0 +1,11 @@
+{
+  "doi": "10.1007/978-981-96-1812-5_7",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "The abstract describes a prediction method for PV power generation but does not assess or model a complete climate-neutral pathway or system configuration. It references zero-carbon goals but focuses on improving prediction accuracy, not evaluating climate neutrality.",
+  "q2_comment": "",
+  "q2_region": "yes",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "The abstract includes quantitative modeling (CNN-BiGRU, EEMD, etc.) but for predicting PV power output, not for generating climate-neutral pathways or scenarios.",
+  "q4_method": "no"
+}
