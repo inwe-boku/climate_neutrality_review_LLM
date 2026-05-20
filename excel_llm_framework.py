@@ -42,9 +42,13 @@ class ExcelLLMFramework:
     def process_rows(self, rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
         processed_rows: list[dict[str, Any]] = []
         for row in rows:
-            print("Evaluate paper: " + str(row["Book title"]))
+            title_text = str(row.get("Book title", "") or "")
+            print("Evaluate paper: " + title_text)
             abstract_text = str(row.get(self.config.abstract_column, "") or "")
-            prompt = self.build_prompt(abstract_text)
+            prompt = self.build_prompt(
+                "Title: " + title_text + "\nAbstract: " + abstract_text
+            )
+            print(prompt)
             extracted = self.llm_client(prompt, row) or {}
             processed_rows.append(extracted)
         return processed_rows
