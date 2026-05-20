@@ -36,7 +36,7 @@ class ExcelLLMFramework:
 
     def build_prompt(self, abstract_text: str) -> str:
         lines = [self.config.instruction.strip()]
-        lines.extend(["", "Abstract:", abstract_text.strip()])
+        lines.extend(["", abstract_text.strip()])
         return "\n".join(lines)
 
     def process_rows(self, rows: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
