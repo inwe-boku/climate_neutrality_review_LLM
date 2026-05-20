@@ -17,22 +17,24 @@ Return a JSON object with 8 fields (4 questions + 4 comments).
 ### QUESTION DEFINITIONS:
 
 Q1 (Climate Neutrality):
-  - Does the abstract describe a pathway or system configuration that IS climate-neutral?
+  - Does the abstract provide a pathway or a system configuration which IS climate-neutral?
+  - We also accept "net zero", "carbon neutral(ity)", "zero emissions/carbon", "deep decarbonization" and similar
   - Merely mentioning "net zero" is NOT sufficient. It must be actually assessed/modeled.
   - Answer: "yes" if pathway/config is climate-neutral | "no" if not | "unclear" if ambiguous
 
 Q2 (Region):
-  - Does the abstract target at least ONE specific geographic region?
+  - Does the abstract target at least ONE specific spatial area?
+  - OK: (group of) country, city, state, province, district
   - "Global" or "worldwide" analysis alone = "no"
   - Answer: "yes" if specific region(s) mentioned | "no" if global-only | "unclear" if ambiguous
 
 Q3 (Sector):
-  - Does the abstract address at least ONE relevant sector?
-  - Examples: energy, industry, transport, agriculture, waste, etc. (not exhaustive)
+  - Does the abstract target at least ONE of the following sectors:
+  - energy, industry, agriculture, forestry, land use, or AFOLU (agriculture, forestry and other land uses)
   - Answer: "yes" if sector specified | "no" if none mentioned | "unclear" if unclear
 
 Q4 (Method):
-  - Does the abstract include quantitative modelling or scenario analysis?
+  - Does the abstract include quantitative modelling and/or a scenario process to generate climate neutral pathways or systems?
   - Qualitative discussion alone = "no"
   - Answer: "yes" if quantitative/modeling present | "no" if not | "unclear" if unclear
 
