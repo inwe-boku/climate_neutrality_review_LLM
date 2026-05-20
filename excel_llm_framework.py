@@ -92,21 +92,28 @@ class ExcelLLMFramework:
                 dois_to_process.append(doi_text)
 
         written_files: list[Path] = []
+        error_dois: list[str] = []
         for row, doi_text in zip(rows_to_process, dois_to_process):
-            # Process single row and write output immediately
-            processed_rows = self.process_rows([row])
-            extracted_row = processed_rows[0] if processed_rows else {}
-            
-            extracted_row["doi"] = doi_text
-            safe_doi = re.sub(r"[^A-Za-z0-9._-]+", "_", doi_text)
+            try:
+                # Process single row and write output immediately
+                processed_rows = self.process_rows([row])
+                extracted_row = processed_rows[0] if processed_rows else {}
 
-            file_path = output_path / f"{safe_doi}.json"
-            file_path.write_text(
-                json.dumps(extracted_row, ensure_ascii=False, indent=2, sort_keys=True),
-                encoding="utf-8",
-            )
-            written_files.append(file_path)
+                extracted_row["doi"] = doi_text
+                safe_doi = re.sub(r"[^A-Za-z0-9._-]+", "_", doi_text)
 
+                file_path = output_path / f"{safe_doi}.json"
+                file_path.write_text(
+                    json.dumps(
+                        extracted_row, ensure_ascii=False, indent=2, sort_keys=True
+                    ),
+                    encoding="utf-8",
+                )
+                written_files.append(file_path)
+            except Exception as exc:
+                print(f"Error processing row {doi_text}: {exc}")
+                error_dois.append(doi_text)
+        print(f"Error processing the following dois: {'\n'.join(error_dois)}")
         return written_files
 
 
