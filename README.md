@@ -8,14 +8,18 @@ The evaluation script `run_evaluation.sh` processes all steps from Login, evalua
 ### Quick start
 Start the workflow by typing 
 ```bash
-pixi run ./run_evaluation.sh <input_file> <output_directory>
+./run_evaluation.sh <input_file> <output_directory>
 ```
 with
 - input_file: the Excel-file to be used as input for the LLM
 - output_directory: the name of the folder, the outputs should be saved to.
 
 **Your input** is needed for Copilot login and logout: 
-- Login: Use "Login with GitHub" - open the URL displayed (by copying it to your browser) - login to your GitHub Account and follow the instructions given - when you have finished the Authentification in the browser, press esc and type exit to exit the interactive mode of copilot.
+- Login:
+  - after the Copilot-motto appeared, if login does not start automatically, type `/login`
+  - You have to trust the "insecure" version of saving the credentials 
+  - Use "Login with GitHub" - open the URL displayed (by copying it to your browser) - login to your GitHub Account and follow the instructions given - when you have finished the Authentification in the browser, the terminal-window will show the successful login procedere.
+  -  press esc and type `exit` to exit the interactive mode of copilot.
 - Logout: Check, if logout was successful, afterwards, type exit to exit the interactive mode of copilot. 
 
 
