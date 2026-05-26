@@ -26,6 +26,6 @@ fi
 echo "Evaluation failed again on retry."
 echo "Logging out of Copilot. This needs your input! Type 'exit' in interactive copilot terminal."
 sleep 5
-copilot logout
+# copilot logout
 
 exit 1
