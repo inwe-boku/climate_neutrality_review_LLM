@@ -1,11 +1,11 @@
 {
   "doi": "10.1016/j.heliyon.2023.e19660",
   "q1_climate_neutrality": "no",
-  "q1_comment": "While net-zero commitment is mentioned, the abstract does not assess or model whether the proposed bioenergy system achieves climate neutrality. It only identifies optimal sites for bioenergy production.",
+  "q1_comment": "",
   "q2_comment": "",
   "q2_region": "yes",
   "q3_comment": "",
   "q3_sector": "yes",
   "q4_comment": "",
-  "q4_method": "yes"
+  "q4_method": "no"
 }

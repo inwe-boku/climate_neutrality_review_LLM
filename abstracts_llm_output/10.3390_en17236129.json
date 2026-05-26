@@ -1,11 +1,11 @@
 {
   "doi": "10.3390/en17236129",
   "q1_climate_neutrality": "no",
-  "q1_comment": "This is a literature review analyzing strategies in existing studies, not a presentation of an actual assessed/modeled climate-neutral pathway or system configuration.",
-  "q2_comment": "Only generic references to 'various regions' and 'worldwide' are provided; no specific spatial areas (country, city, state, etc.) are mentioned.",
+  "q1_comment": "",
+  "q2_comment": "",
   "q2_region": "no",
   "q3_comment": "",
   "q3_sector": "yes",
-  "q4_comment": "The study uses systematic literature review with bibliometric and content analysis, not quantitative modeling or scenario development to generate climate-neutral pathways.",
+  "q4_comment": "",
   "q4_method": "no"
 }

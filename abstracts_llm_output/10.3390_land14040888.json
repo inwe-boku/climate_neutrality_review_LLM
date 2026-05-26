@@ -3,9 +3,9 @@
   "q1_climate_neutrality": "no",
   "q1_comment": "",
   "q2_comment": "",
-  "q2_region": "no",
+  "q2_region": "yes",
   "q3_comment": "",
   "q3_sector": "yes",
-  "q4_comment": "Quantitative methods (monitoring, correlation analysis, regression models) analyze existing CO2 patterns, not model scenarios or generate climate-neutral pathways.",
+  "q4_comment": "",
   "q4_method": "no"
 }

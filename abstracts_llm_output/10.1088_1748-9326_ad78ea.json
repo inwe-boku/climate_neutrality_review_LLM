@@ -1,11 +1,11 @@
 {
   "doi": "10.1088/1748-9326/ad78ea",
-  "q1_climate_neutrality": "unclear",
-  "q1_comment": "The abstract describes a strategy aiming to sequester 4 Gt CO2/year but does not explicitly confirm this results in climate neutrality or present modeling/assessment evidence that the proposed system is actually climate-neutral.",
+  "q1_climate_neutrality": "yes",
+  "q1_comment": "",
   "q2_comment": "",
   "q2_region": "yes",
   "q3_comment": "",
   "q3_sector": "yes",
-  "q4_comment": "While specific numbers are provided (4 Gt CO2/year, 25% of landmass), the abstract describes a strategy/proposal without detailing quantitative modeling methodology or scenario analysis used to generate the pathway.",
-  "q4_method": "no"
+  "q4_comment": "The paper is framed as a 'visionary strategy' with stated targets (4 Gt, 25% landmass, 100,000 residents), but it is unclear whether these derive from quantitative modelling or are aspirational design parameters.",
+  "q4_method": "unclear"
 }

@@ -1,9 +1,9 @@
 {
   "doi": "10.3390/land13081147",
-  "q1_climate_neutrality": "no",
-  "q1_comment": "",
+  "q1_climate_neutrality": "unclear",
+  "q1_comment": "The paper simulates a low-carbon development scenario and states it 'aids in achieving carbon neutrality', but does not explicitly confirm that a carbon-neutral state is actually reached or modelled.",
   "q2_comment": "",
-  "q2_region": "no",
+  "q2_region": "yes",
   "q3_comment": "",
   "q3_sector": "yes",
   "q4_comment": "",

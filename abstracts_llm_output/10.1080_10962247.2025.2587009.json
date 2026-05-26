@@ -1,11 +1,11 @@
 {
   "doi": "10.1080/10962247.2025.2587009",
   "q1_climate_neutrality": "no",
-  "q1_comment": "The study mentions India's net-zero target aspirationally but analyzes existing emissions patterns; it does not describe or assess an actual climate-neutral pathway or system configuration.",
+  "q1_comment": "",
   "q2_comment": "",
   "q2_region": "yes",
   "q3_comment": "",
   "q3_sector": "yes",
-  "q4_comment": "The study uses quantitative methods (CO2 estimation, log-linear regression) to analyze emissions and influencing factors, but not to generate or model climate-neutral pathways or systems.",
+  "q4_comment": "",
   "q4_method": "no"
 }

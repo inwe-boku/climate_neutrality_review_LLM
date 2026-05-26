@@ -3,9 +3,9 @@
   "q1_climate_neutrality": "no",
   "q1_comment": "",
   "q2_comment": "",
-  "q2_region": "no",
+  "q2_region": "yes",
   "q3_comment": "",
   "q3_sector": "yes",
-  "q4_comment": "Study includes quantitative modeling (machine learning) but does not generate climate-neutral pathways or scenarios. It only predicts correlations between electricity consumption and CO2 concentrations.",
+  "q4_comment": "",
   "q4_method": "no"
 }

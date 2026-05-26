@@ -1,11 +1,11 @@
 {
   "doi": "10.1016/j.apenergy.2023.122212",
   "q1_climate_neutrality": "no",
-  "q1_comment": "Abstract discusses carbon neutrality as a goal and analyzes relationships affecting environmental sustainability, but does not present a specific pathway or system configuration that IS climate-neutral.",
+  "q1_comment": "",
   "q2_comment": "",
   "q2_region": "yes",
   "q3_comment": "",
   "q3_sector": "yes",
-  "q4_comment": "ARDL quantitative modeling is used to analyze historical relationships and EKC phenomenon, not to generate or model climate-neutral pathways or scenarios.",
+  "q4_comment": "",
   "q4_method": "no"
 }

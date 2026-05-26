@@ -1,0 +1,11 @@
+{
+  "doi": "10.5846/stxb202205041230",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "The abstract is a review of estimation approaches and models for rooftop solar potential, not a specific pathway or system configuration that achieves climate neutrality.",
+  "q2_comment": "No specific region is targeted; the review is general and applicable across different regions.",
+  "q2_region": "no",
+  "q3_comment": "Energy sector is clearly targeted (electricity supply via solar photovoltaic).",
+  "q3_sector": "yes",
+  "q4_comment": "This is a methodological review of existing approaches rather than a study that applies quantitative modeling to generate climate-neutral pathways.",
+  "q4_method": "no"
+}

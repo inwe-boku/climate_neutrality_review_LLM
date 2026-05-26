@@ -1,0 +1,11 @@
+{
+  "doi": "10.1016/j.eneco.2024.107672",
+  "q1_climate_neutrality": "unclear",
+  "q1_comment": "The model enforces carbon neutrality as a constraint, but results show large biopower increases could compromise carbon neutrality — it is not confirmed that a climate-neutral pathway is actually achieved.",
+  "q2_comment": "",
+  "q2_region": "yes",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "",
+  "q4_method": "yes"
+}

@@ -5,7 +5,7 @@
   "q2_comment": "",
   "q2_region": "yes",
   "q3_comment": "",
-  "q3_sector": "no",
-  "q4_comment": "The abstract presents quantitative modeling (LSTM-RF hybrid), but for carbon emission prediction, not for generating climate neutral pathways or systems.",
+  "q3_sector": "yes",
+  "q4_comment": "",
   "q4_method": "no"
 }

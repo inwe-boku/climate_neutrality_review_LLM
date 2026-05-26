@@ -1,7 +1,7 @@
 {
   "doi": "10.3390/en18061532",
-  "q1_climate_neutrality": "no",
-  "q1_comment": "The abstract discusses carbon peaking and carbon metabolism balance as goals, but does not establish that any scenario pathway actually achieves climate neutrality.",
+  "q1_climate_neutrality": "unclear",
+  "q1_comment": "The high-limit scenario achieves an early carbon peak but carbon neutrality by 2060 is implied as a goal, not explicitly demonstrated as achieved in the results.",
   "q2_comment": "",
   "q2_region": "yes",
   "q3_comment": "",

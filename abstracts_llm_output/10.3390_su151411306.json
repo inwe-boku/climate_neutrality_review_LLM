@@ -1,7 +1,7 @@
 {
   "doi": "10.3390/su151411306",
-  "q1_climate_neutrality": "unclear",
-  "q1_comment": "Scenarios are modeled to assess contributions to achieving carbon neutrality by 2030 and 2060, but the results only confirm that 'all scenarios can reduce emissions' without explicitly stating that any pathway achieves climate neutrality.",
+  "q1_climate_neutrality": "yes",
+  "q1_comment": "",
   "q2_comment": "",
   "q2_region": "yes",
   "q3_comment": "",

@@ -1,11 +1,11 @@
 {
   "doi": "10.1016/j.esd.2025.101855",
   "q1_climate_neutrality": "no",
-  "q1_comment": "Abstract discusses barriers to achieving NZCCs but does not model or assess an actual climate-neutral pathway or system configuration.",
+  "q1_comment": "",
   "q2_comment": "",
   "q2_region": "yes",
   "q3_comment": "",
   "q3_sector": "yes",
-  "q4_comment": "While quantitative methods (ISM, MICMAC) are used, they are applied for barrier analysis, not to generate or model climate-neutral pathways or systems.",
+  "q4_comment": "",
   "q4_method": "no"
 }
