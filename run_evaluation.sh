@@ -1,3 +1,5 @@
+#!/bin/bash
+
 INPUT_FILE="$1"
 OUTPUT_DIRECTORY="$2"
 
