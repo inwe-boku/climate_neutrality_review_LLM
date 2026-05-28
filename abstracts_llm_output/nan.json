@@ -3,11 +3,12 @@
   "q1_climate_neutrality": "no",
   "q1_climate_neutrality": "yes",
   "q1_comment": "",
+  "q1_comment": "The abstract mentions the EU's 2050 net-zero goal as context, but does not present a climate-neutral pathway or system. The study assesses biomass potential and bioenergy capacity without demonstrating that the assessed system achieves climate neutrality.",
   "q2_comment": "",
   "q2_region": "yes",
   "q3_comment": "",
   "q3_sector": "yes",
   "q4_comment": "",
-  "q4_method": "no"
+  "q4_method": "no",
   "q4_method": "yes"
 }

@@ -1,0 +1,11 @@
+{
+  "doi": "10.13227/j.hjkx.202403231",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "Abstract mentions carbon neutrality as a goal but does not provide a pathway or system configuration that IS climate-neutral. The study assesses carbon budgets and proposes optimization strategies, but does not model a climate-neutral pathway.",
+  "q2_comment": "",
+  "q2_region": "yes",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "Quantitative modeling is present (carbon balance model, compensation model), but these are used for assessment and zoning, not to generate climate-neutral pathways or scenarios.",
+  "q4_method": "no"
+}
