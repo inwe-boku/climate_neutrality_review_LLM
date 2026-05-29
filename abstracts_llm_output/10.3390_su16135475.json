@@ -1,0 +1,11 @@
+{
+  "doi": "10.3390/su16135475",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "",
+  "q2_comment": "",
+  "q2_region": "yes",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "The study uses quantitative modeling (RF-MLP-LR) for predicting cement consumption, but not to generate climate-neutral pathways or scenarios.",
+  "q4_method": "no"
+}

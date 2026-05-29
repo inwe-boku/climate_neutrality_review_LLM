@@ -1,0 +1,11 @@
+{
+  "doi": "10.1007/978-981-99-8405-3_26",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "The abstract mentions carbon neutrality as a goal but does not actually assess or demonstrate that the Space Data Generator achieves climate-neutral outcomes; it describes a planning tool without modeling/quantifying the pathway to climate neutrality.",
+  "q2_comment": "Only generic reference to 'rural areas' globally; no specific country, city, state, province, or district is mentioned.",
+  "q2_region": "no",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "While the tool performs optimization (solar panel placement, crop layout) using data, the abstract does not describe quantitative modeling or scenario analysis specifically designed to generate climate-neutral pathways or systems.",
+  "q4_method": "no"
+}

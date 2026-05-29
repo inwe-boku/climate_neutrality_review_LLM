@@ -1,0 +1,11 @@
+{
+  "doi": "10.3390/buildings15142462",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "",
+  "q2_comment": "",
+  "q2_region": "yes",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "The abstract includes quantitative modeling (GEP, Random Forest optimization) but for predicting emissions, not for modeling or generating climate-neutral pathways or scenarios.",
+  "q4_method": "no"
+}
