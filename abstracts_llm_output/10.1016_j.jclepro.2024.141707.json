@@ -1,0 +1,11 @@
+{
+  "doi": "10.1016/j.jclepro.2024.141707",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "Carbon neutrality is mentioned only as a time reference ('time base'), not as an assessed or modeled pathway. The study assesses biomass energy potential (2-7% fossil fuel substitution), which does not constitute a climate-neutral system configuration.",
+  "q2_comment": "",
+  "q2_region": "yes",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "Quantitative modeling (FLUS model) and scenarios are present, but designed to assess biomass energy potential under general development scenarios, not specifically to generate climate-neutral pathways.",
+  "q4_method": "no"
+}

@@ -1,0 +1,11 @@
+{
+  "doi": "10.1016/j.energy.2025.134647",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "Abstract mentions 'carbon-neutral pathways' as a goal but explicitly states further research is needed for life cycle assessment and sustainability evaluation. Climate neutrality is not actually assessed or demonstrated.",
+  "q2_comment": "",
+  "q2_region": "yes",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "Study uses quantitative RSM/CCD for process optimization but does not model climate neutral pathways. LCA and sustainability impact assessment are identified as needed future work.",
+  "q4_method": "no"
+}

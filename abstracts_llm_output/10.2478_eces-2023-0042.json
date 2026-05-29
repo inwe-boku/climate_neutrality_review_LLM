@@ -1,0 +1,11 @@
+{
+  "doi": "10.2478/eces-2023-0042",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "The study analyzes decarbonization potential and ranks sub-sectors but does not assess or model a pathway that achieves climate neutrality itself.",
+  "q2_comment": "",
+  "q2_region": "yes",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "Factor analysis and fuzzy evaluation are used to rank industries by advantages/sustainability, but not to generate or model climate-neutral pathways or scenarios.",
+  "q4_method": "no"
+}

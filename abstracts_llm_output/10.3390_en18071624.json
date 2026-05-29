@@ -1,0 +1,11 @@
+{
+  "doi": "10.3390/en18071624",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "The paper discusses revenue forecasting for multi-energy stations and mentions carbon neutrality as a goal, but does not present or assess an actual climate-neutral pathway or system configuration.",
+  "q2_comment": "",
+  "q2_region": "yes",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "The study includes quantitative machine learning modeling, but it is for revenue forecasting, not for generating climate neutral pathways or systems.",
+  "q4_method": "no"
+}

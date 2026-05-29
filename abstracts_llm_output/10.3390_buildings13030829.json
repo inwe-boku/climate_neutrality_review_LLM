@@ -1,0 +1,11 @@
+{
+  "doi": "10.3390/buildings13030829",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "Title mentions 'carbon-neutral society' as aspiration, but abstract describes energy cost reduction via trading optimization, not a pathway that is actually climate-neutral.",
+  "q2_comment": "No specific geographic region (country, city, state, province) is mentioned; work is presented generically.",
+  "q2_region": "no",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "Scenario-based simulations are used, but to optimize electricity costs, not to model climate-neutral pathways.",
+  "q4_method": "no"
+}
