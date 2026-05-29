@@ -1,13 +1,11 @@
 {
-  "doi": "nan",
+  "doi": "10.1007/978-3-031-92221-3",
   "q1_climate_neutrality": "no",
-  "q1_climate_neutrality": "yes",
   "q1_comment": "",
   "q2_comment": "",
-  "q2_region": "yes",
+  "q2_region": "no",
   "q3_comment": "",
   "q3_sector": "yes",
   "q4_comment": "",
   "q4_method": "no"
-  "q4_method": "yes"
 }

@@ -1,0 +1,11 @@
+{
+  "doi": "10.1016/j.seta.2024.103665",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "Title mentions 'net-zero energy' but abstract describes a load scheduling framework without demonstrating that the proposed system configuration actually achieves climate neutrality through modeling.",
+  "q2_comment": "No specific spatial area mentioned; only generic references to 'smart cities' and 'residential settings'.",
+  "q2_region": "no",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "",
+  "q4_method": "yes"
+}

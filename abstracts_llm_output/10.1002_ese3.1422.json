@@ -1,6 +1,5 @@
 {
-  "doi": "nan",
-  "q1_climate_neutrality": "no",
+  "doi": "10.1002/ese3.1422",
   "q1_climate_neutrality": "yes",
   "q1_comment": "",
   "q2_comment": "",
@@ -8,6 +7,5 @@
   "q3_comment": "",
   "q3_sector": "yes",
   "q4_comment": "",
-  "q4_method": "no"
   "q4_method": "yes"
 }

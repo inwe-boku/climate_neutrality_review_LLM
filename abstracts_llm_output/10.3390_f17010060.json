@@ -1,0 +1,11 @@
+{
+  "doi": "10.3390/f17010060",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "",
+  "q2_comment": "",
+  "q2_region": "yes",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "Study uses threshold regression modeling to analyze emissions relationships, not to model pathways toward climate neutrality.",
+  "q4_method": "no"
+}

@@ -1,13 +1,11 @@
 {
-  "doi": "nan",
+  "doi": "10.1016/j.ecolind.2023.110986",
   "q1_climate_neutrality": "no",
-  "q1_climate_neutrality": "yes",
   "q1_comment": "",
   "q2_comment": "",
   "q2_region": "yes",
   "q3_comment": "",
   "q3_sector": "yes",
   "q4_comment": "",
-  "q4_method": "no"
   "q4_method": "yes"
 }

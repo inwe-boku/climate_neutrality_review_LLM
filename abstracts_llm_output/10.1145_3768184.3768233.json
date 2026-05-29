@@ -1,0 +1,11 @@
+{
+  "doi": "10.1145/3768184.3768233",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "Paper discusses low-carbon transition and uses ML to predict carbon neutrality factors, but does not present an assessed/modeled pathway or system configuration that IS climate-neutral.",
+  "q2_comment": "",
+  "q2_region": "yes",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "Quantitative ML modeling is present, but used for predicting factors/features, not for generating or modeling climate-neutral pathways or systems.",
+  "q4_method": "no"
+}
