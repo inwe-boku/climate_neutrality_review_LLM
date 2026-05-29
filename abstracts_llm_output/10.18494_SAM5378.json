@@ -1,0 +1,11 @@
+{
+  "doi": "10.18494/SAM5378",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "The abstract analyzes current carbon emissions and sinks in Beijing, but does not present a pathway or configuration that IS climate-neutral. It shows vegetation carbon absorption is lower than energy emissions, not a climate-neutral system.",
+  "q2_comment": "",
+  "q2_region": "yes",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "C-FIX model is applied, but it is used for descriptive analysis of historical emissions (2010-2020), not to generate or model climate-neutral pathways or scenarios.",
+  "q4_method": "no"
+}

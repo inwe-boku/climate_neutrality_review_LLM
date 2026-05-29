@@ -1,0 +1,11 @@
+{
+  "doi": "10.1016/j.indic.2023.100323",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "",
+  "q2_comment": "",
+  "q2_region": "yes",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "The abstract includes quantitative modeling (ARDL model) but uses it for retrospective emissions analysis (1970-2020), not to generate climate-neutral pathways or scenarios.",
+  "q4_method": "no"
+}
