@@ -1,0 +1,11 @@
+{
+  "doi": "10.3390/en15051724",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "While carbon neutrality is mentioned as background motivation, the abstract does not provide or assess an actual climate-neutral pathway or system configuration. It analyzes factors influencing straw energy use, not a climate-neutral system.",
+  "q2_comment": "",
+  "q2_region": "yes",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "Quantitative modeling (ridge regression with panel data) is present, but it analyzes relationships between variables and straw energy utilization, not to generate climate-neutral pathways or scenarios.",
+  "q4_method": "no"
+}

@@ -1,0 +1,11 @@
+{
+  "doi": "10.11654/jaes.2021-0647",
+  "q1_climate_neutrality": "no",
+  "q1_comment": "Abstract discusses carbon neutral goals and predicts emission reductions, but does not describe a specific pathway or system configuration that achieves climate neutrality.",
+  "q2_comment": "",
+  "q2_region": "yes",
+  "q3_comment": "",
+  "q3_sector": "yes",
+  "q4_comment": "Quantitative methods (emission factor method, STIRPAT model) are used for prediction only, not to generate or model pathways toward climate neutrality.",
+  "q4_method": "no"
+}

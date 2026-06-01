@@ -1,0 +1,11 @@
+{
+  "doi": "10.1016/j.joule.2021.12.013",
+  "q1_climate_neutrality": "unclear",
+  "q1_comment": "Title promises 'net-zero-carbon' SAF and mentions 'carbon-negative crude oil,' but this is primarily author bios without describing an actual assessed pathway or modeling study.",
+  "q2_comment": "Text mentions work 'across the US and globe,' which is global scope, not specific region.",
+  "q2_region": "no",
+  "q3_comment": "Addresses energy sector (aviation fuel production from biomass feedstocks).",
+  "q3_sector": "yes",
+  "q4_comment": "Abstract is author background; no quantitative modeling, scenarios, or methodological approach is described.",
+  "q4_method": "no"
+}
