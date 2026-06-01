@@ -41,6 +41,18 @@ flowchart TD
     LOGOUT --> FINISHED((finished))
 ```
 
+### Collect all evaluations
+Start the collection of all evaluations with 
+```bash
+pixi run python integrate_answers_to_excel.py <input_file> <input_folder>
+```
+with 
+- input_file: Excel-File, with the initial input-data. This must contain a column "DOI"
+- input_folder: folder of all json-styled llm-output-files to be collected.
+
+> [!NOTE]
+> The code expects *exactly* the structure of llm-abstracts output. For other structured json-files (eg. full-text evaluation), this needs adaption.
+
 ## Python evaluation script
 This script is used in the evaluation workflow and can easily be executed "by hand", if needed. 
 ### What it does
